@@ -3,7 +3,7 @@ import './App.css'
 export default function App() {
   return (
     <div className='App'>
-      <div className='heaedr'>
+      <div className='header'>
         <h1>📘 노트</h1>
         <button>쓰기</button>
       </div>
