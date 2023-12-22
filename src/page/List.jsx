@@ -13,18 +13,17 @@ export default function List() {
       querySnapshot.forEach((doc) => {
         items.push(doc.data())
       })
-      // console.log  (items)
       setNotes(items)
     })
+
+    return () => unsubscribe()
   }, [])
 
   return (
-    <div>
-      <ul className='list'>
-        {notes.map((note) => (
-          <NoteItem note={note} key={note.id} />
-        ))}
-      </ul>
-    </div>
+    <ul className='list'>
+      {notes.map((note) => (
+        <NoteItem note={note} key={note.id} />
+      ))}
+    </ul>
   )
 }
