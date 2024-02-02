@@ -15,7 +15,7 @@ export default function NoteItem({ note }) {
   function editTodo() {
     navigete('/edit', { state: note })
   }
-
+  // sss
   return (
     <li className='note'>
       <h2>{note.title}</h2>
